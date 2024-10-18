@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida submarina</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Vida submarina</h1>
+        </header>
+        <section>
+            <div class="contenedor">
+                <div class="caja">
+                    <img src="imagenes/Riviera-Maya-Sea-Turtle-comprimido.jpg" alt="Tortuga marina">
+                    <h2>Descripción del objetivo</h2>
+                </div>
+                <div class="texto-central">
+                    <h2>Selecciona tarjeta para ampliar el tema</h2>
+                    <p>Aquí aparecerá el texto del tema</p>
+                </div>
+                <div class="caja">
+                    <img src="imagenes/captura-de-peces-comprimido.jpg" alt="Captura de peces">
+                    <h2>¿Por qué del objetivo?</h2>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="caja">
+                    <img src="imagenes/plásticos-comprimido.jpg" alt="Plásticos">
+                    <h2>¿Cuál es el problema?</h2>
+                </div>
+                <div class="caja">
+                    <img src="imagenes/Oceano-y-salud.jpg" alt="Océano y salud">
+                    <h2>Relación entre océanos y salud</h2>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="caja">
+                    <img src="imagenes/07MAR_MEXICOENCUMBRE-comprimido.jpg" alt="área protegida">
+                    <h2>¿Qué podemos hacer?</h2>
+                </div>
+                <div class="caja">
+                    <img src="imagenes/Estudio-sumergible-titan-2023-comprimido.jpg" alt="Estudio océano">
+                    <h2>Datos destacables</h2>
+                </div>
+                <div class="caja">
+                    <img src="imagenes/S_SDG-goals_icons-individual-rgb-14_0-comprimido.png.jpg" alt="Objetivo 14 ONU">
+                    <h2>Metas del objetivo 14</h2>
+                </div>
+            </div>
+        </section>
+        
+        <script>
+const tarjetas = document.querySelectorAll('.caja');
+const textoCentral = document.querySelector('.texto-central');
+
+tarjetas.forEach((tarjeta, index) => {
+    tarjeta.addEventListener('click', () => {
+        let nuevoTitulo = tarjeta.querySelector('h2').innerText;
+        let nuevoTexto = '';
+
+        switch(index) {
+            case 0:
+                nuevoTexto = "<p>El Objetivo 14 pretende conserver y utilizar sosteniblemente los océanos.</p> <p>Los océanos proporcionan recursos naturales clave como alimentos, medicinas, biocombustibles y otros productos; ayudan a descomponer y eliminar los residuos y a reducir la contaminación; y sus ecosistemas costeros contribuyen a reducir los daños causados por las tormentas.</p> <p>La contaminación marina está alcanzando niveles extremos. Más de 17 millones de toneladas métricas contaminaban el océano en 2021, cifra que se duplicará o triplicará para el año 2040, lo que resulta preocupante. El plástico es el tipo de desecho marino más dañino.</p> <p>La gestión responsable de este vital recurso mundial es una de las claves de un futuro sostenible.</p>";
+                break;
+            case 1:
+                nuevoTexto = "<p>Los océanos son el soporte vital de nuestro planeta y regulan el sistema climático mundial. Constituyen el mayor ecosistema del mundo, albergan casi un millón de especies conocidas y presentan un enorme potencial científico sin explotar.</p> <p>Los océanos y la pesca siguen cubriendo las necesidades económicas, sociales y medioambientales de la población mundial.</p>";
+                break;
+            case 2:
+                nuevoTexto = "<p>Los océanos absorben alrededor del 23 % de las emisiones anuales de CO2 generadas por la actividad humana y contribuyen a mitigar los efectos del cambio climático. Además, absorben el 90 % del exceso de calor causado por el cambio climático.</p> <p>El aumento de los niveles de residuos en los océanos del mundo también supone un importante impacto medioambiental y económico.</p> <p>Cerca del 89 % de los residuos plásticos encontrados en el fondo de los océanos son artículos de un solo uso, como bolsas de plástico.</p>";
+                break;
+            case 3:
+                nuevoTexto = "<p>La biodiversidad marina ofrece oportunidades muy importantes para la industria farmacéutica.</p> <p>El sector de la pesca marítima da empleo a 57 millones de personas en todo el mundo y constituye la principal fuente de proteínas de más del 50 % de la población de países menos desarrollados.</p>";
+                break;
+            case 4:
+                nuevoTexto = "<p>Para conservar la biodiversidad y garantizar un futuro sostenible al sector de la pesca, deben establecerse sistemas de gestión completos, eficaces y equitativos de áreas protegidas por el Estado.</p>";
+                break;
+            case 5:
+                nuevoTexto = "<p>El océano se encuentra en estado de emergencia, ya que el aumento de la eutrofización, de la acidificación, del calentamiento de los océanos y de la contaminación por plásticos empeoran su salud. Además, persiste la alarmante tendencia a la sobrepesca, que ha provocado la desaparición de más de un tercio de las poblaciones mundiales de peces.</p> <p>Aunque se han producido algunos avances en la ampliación de las áreas marinas protegidas, en la lucha contra la pesca ilegal, no declarada y no reglamentada, en la prohibición de las subvenciones a la pesca y en el apoyo a los pescadores a pequeña escala, estos no se producen a la velocidad, o escala, necesarias para cumplir el Objetivo 14.</p> <p>Aumentar la financiación de la ciencia oceánica, intensificar los esfuerzos de conservación, promover soluciones basadas en la naturaleza y en los ecosistemas, abordar las interconexiones y los impactos de las presiones inducidas por el ser humano y cambiar con urgencia el rumbo del cambio climático para salvaguardar el mayor ecosistema del planeta.</p>";
+                break;
+            case 6:
+                nuevoTexto = "<p>De aquí a 2025, prevenir y reducir significativamente la contaminación marina de todo tipo, en particular la producida por actividades realizadas en tierra, incluidos los detritos marinos y la polución por nutrientes</p> <p>Minimizar y abordar los efectos de la acidificación de los océanos, incluso mediante una mayor cooperación científica a todos los niveles.</p> <p>Aumentar los conocimientos científicos, desarrollar la capacidad de investigación y transferir tecnología marina, teniendo en cuenta los Criterios y Directrices para la Transferencia de Tecnología Marina de la Comisión Oceanográfica Intergubernamental, a fin de mejorar la salud de los océanos y potenciar la contribución de la biodiversidad marina al desarrollo de los países en desarrollo, en particular los pequeños Estados insulares en desarrollo y los países menos adelantados</p> <p>Facilitar el acceso de los pescadores artesanales a los recursos marinos y los mercados</p> <p>Mejorar la conservación y el uso sostenible de los océanos y sus recursos aplicando el derecho internacional reflejado en la Convención de las Naciones Unidas sobre el Derecho del Mar, que constituye el marco jurídico para la conservación y la utilización sostenible de los océanos y sus recursos, como se recuerda en el párrafo 158 del documento “El futuro que queremos”</p>";
+                break;
+        }
+
+        const ola = document.createElement('div');
+        ola.classList.add('ola');
+        textoCentral.appendChild(ola);
+
+        ola.addEventListener('animationend', () => {
+            textoCentral.querySelector('h2').innerHTML = nuevoTitulo;
+            textoCentral.querySelector('p').innerHTML = nuevoTexto;
+            
+            textoCentral.removeChild(ola);
+        });
+    });
+});
+
+        </script>
+        
+    </main>
+</body>
+
+</html>
